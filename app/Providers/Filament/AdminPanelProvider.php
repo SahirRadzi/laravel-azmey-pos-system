@@ -28,8 +28,11 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::Rose,
+                'primary' => Color::Gray,
             ])
+            ->font(family:'Poppins') // font family stye 'Poppins' / By Default 'Inter'
+            // ->darkMode(condition: false) // darkMode setting boolean
+
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->discoverClusters(in: app_path('Filament/Clusters'), for: 'App\\Filament\\Clusters')
